@@ -1,0 +1,64 @@
+const tTambahkanAktifitas = document.querySelector(".tambahkan");
+const daftarKegiatan = document.querySelector(".daftar-kegiatan");
+const kegiatan = document.querySelector(".kegiatan");
+const waktu = document.querySelector(".waktu");
+const kegiatanSelesai = document.querySelector(".kegiatan-selesai");
+
+// TODO membuat fungsi tombol add
+tTambahkanAktifitas.addEventListener("click", () => {
+  const list = document.createElement("p");
+  list.className = "listKegiatan";
+  const cheked = document.createElement("img");
+  list.innerHTML = `${kegiatan.value} ${waktu.value}`;
+  cheked.setAttribute("src", "img/check-square.svg");
+  cheked.addEventListener("click", () => {
+    const trash = document.createElement("img");
+    trash.setAttribute("src", "img/trash.svg");
+    trash.setAttribute("class", "trash");
+    trash.addEventListener("click", () => {
+      list.remove();
+      trash.remove();
+    });
+    kegiatanSelesai.appendChild(list);
+    cheked.remove();
+    kegiatanSelesai.appendChild(trash);
+  });
+  list.appendChild(cheked);
+  daftarKegiatan.appendChild(list);
+});
+
+
+let centang;
+let selesai;
+const tTambahkan = document.getElementById("tambahkan");
+const inputKegiatan = document.querySelector(".kegiatan");
+const inputWaktu = document.querySelector(".waktu");
+const daftarKegiatan = document.getElementById("daftar-kegiatan");
+const kegiatanSelesai = document.querySelector(".kegiatan-selesai");
+
+tTambahkan.addEventListener("click", () => {
+  const tugas = document.createElement("p");
+  const tanggal = document.createElement("p");
+  tugas.innerHTML = inputKegiatan.value;
+  tanggal.innerHTML = inputWaktu.value;
+  centang = document.createElement("img");
+  centang.setAttribute("src", "img/check-square.svg");
+  tugas.className = "listKegiatan";
+  tanggal.className = "waktuKegiatan";
+  const subTugas = document.createElement("div");
+  subTugas.style.display = "flex";
+  subTugas.appendChild(tugas);
+  subTugas.appendChild(tanggal);
+  subTugas.appendChild(centang);
+  daftarKegiatan.appendChild(subTugas);
+
+  if (centang) {
+    centang.addEventListener("click", () => {
+      // Pastikan subTugas didefinisikan dan memiliki elemen parent sebelum dihapus
+      if (subTugas && subTugas.parentElement) {
+        kegiatanSelesai.appendChild(centang.parentElement);
+      }
+    });
+  }
+});
+
