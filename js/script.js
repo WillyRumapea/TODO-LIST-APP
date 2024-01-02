@@ -23,8 +23,10 @@ tambahKegiatan.addEventListener("click", () => {
     // ikon untuk menghapus dan mencentang
     const centang = document.createElement("img");
     centang.setAttribute("src", "img/check-square.svg");
+    centang.className = "centang";
     let hapus = document.createElement("img");
     hapus.setAttribute("src", "img/trash.svg");
+    hapus.className = "trash";
 
     // tombol edit
     edit.innerHTML = "edit";
@@ -50,6 +52,7 @@ tambahKegiatan.addEventListener("click", () => {
       centang.remove();
       subKegiatan.appendChild(hapus);
     });
+
     // event untuk icon hapus
     hapus.addEventListener("click", () => {
       subKegiatan.remove();

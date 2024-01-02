@@ -9,10 +9,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 20px;
+  background-color: #27374d;
 }
 
 main#container {
-  width: 500px;
+  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +22,7 @@ main#container {
   padding: 20px;
   border: 1px solid;
   border-radius: 10px;
-  background-color: #131212d2;
+  background-color: #526d82;
 }
 
 .inputan-user {
@@ -30,6 +31,7 @@ main#container {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 100px;
 }
 
 form {
@@ -38,49 +40,123 @@ form {
 }
 
 button {
-  width: 50px;
+  width: 80px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 22px;
+  background-color: #9db2bf;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.2s;
+}
+
+button:hover {
+  background-color: #2d2d2d;
+  color: #efefef;
+  box-shadow: rgba(255, 255, 255, 0.85) 0px 5px 15px;
+  transform: translateY(2px) translateX(0.5px);
 }
 
 .listKegiatan {
-  background-color: #00ddff;
+  background-color: #27374d;
   width: 150px;
   border: 1px solid;
-  padding-left: 30px;
+  text-align: center;
+  color: #f0f0fe;
+  font-family: "Poppins", sans-serif;
 }
 
 .waktuKegiatan {
-  background-color: brown;
-  width: 90px;
+  background-color: #27374d;
+  width: 100px;
+  display: flex;
   border: 1px solid;
-  padding-right: 20px;
+  font-size: 12px;
+  color: #f0f0fe;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-top: 2px;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
+.centang:hover {
+  background-color: #fff;
+}
+
+label {
+  font-size: 23px;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 0px rgb(54, 84, 134, 1), 2px -2px 0 rgb(54, 84, 134, 1),
+    -2px 2px 0 rgb(54, 84, 134, 1), -2px -2px 0 rgb(54, 84, 134, 1),
+    2px 0px 0 rgb(54, 84, 134, 1), 0px 2px 0 rgb(54, 84, 134, 1),
+    -2px 0px 0 rgb(54, 84, 134, 1), 0px -2px 0 rgb(54, 84, 134, 1);
+  font-weight: 500;
+  color: #fff;
+}
 #daftar-kegiatan {
-  width: 300px;
+  width: 500px;
   background-color: #dddeee;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   font-family: Arial, Helvetica, sans-serif;
   color: #808080;
+  border: 1.5px solid #808080;
+  border-radius: 10px;
 }
 
 .kegiatan-selesai {
-  width: 300px;
-  background-color: #22ddee;
+  width: 500px;
+  background-color: #dddeee;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-family: Arial, Helvetica, sans-serif;
   color: #ddeeff;
+  border: 1.5px solid #808080;
+  border-radius: 10px;
 }
 
 .trash {
   width: 30px;
+}
+
+.trash:hover {
+  background-color: #fff;
+}
+
+.kegiatan {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  font-weight: 400;
+  width: 500px;
+  height: 30px;
+  border: 2.5px solid #dde6ed;
+  border-radius: 20px;
+}
+
+.waktu {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 400;
+  width: 150px;
+  height: 30px;
+  border: 2.5px solid #dde6ed;
+  border-radius: 20px;
+  padding-right: 10px;
 }
