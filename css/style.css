@@ -160,3 +160,64 @@ label {
   border-radius: 20px;
   padding-right: 10px;
 }
+@media screen and (max-width: 480px) {
+  main#container {
+    margin-top: 3rem;
+    max-width: 350px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .kegiatan {
+    width: 160px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .waktu {
+    width: 88px;
+    font-size: 8px;
+    padding: 4px;
+    font-weight: 600;
+  }
+
+  button {
+    width: 40px;
+    font-size: 13px;
+  }
+
+  button:active {
+    background-color: #2d2d2d;
+    color: #efefef;
+    box-shadow: rgba(255, 255, 255, 0.85) 0px 5px 15px;
+    transform: translateY(2px) translateX(0.5px);
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  #daftar-kegiatan {
+    width: 270px;
+  }
+
+  .listKegiatan {
+    width: 100px;
+    height: 35px;
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .waktuKegiatan {
+    width: 50px;
+    height: 35px;
+    font-size: 8px;
+    padding: 8px;
+  }
+
+  .kegiatan-selesai {
+    width: 270px;
+  }
+}
