@@ -30,6 +30,7 @@ tambahKegiatan.addEventListener("click", () => {
 
     // tombol edit
     edit.innerHTML = "edit";
+    edit.style.marginTop = "5px";
 
     // atur display menjadi flex agar rapi
     subKegiatan.style.display = "flex";
