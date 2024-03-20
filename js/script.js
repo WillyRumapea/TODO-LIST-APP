@@ -3,6 +3,8 @@ const inputUser = document.querySelector(".kegiatan");
 const waktuUser = document.querySelector(".waktu");
 const daftarKegiatan = document.getElementById("daftar-kegiatan");
 const kegiatanSelesai = document.getElementsByClassName("kegiatan-selesai")[0];
+const kolomPencarian = document.querySelector(".search");
+const tombolPencarian = document.querySelector(".search-button");
 
 tambahKegiatan.addEventListener("click", () => {
   // deklarasi variabel baru
@@ -41,6 +43,7 @@ tambahKegiatan.addEventListener("click", () => {
     subKegiatan.appendChild(waktu);
     subKegiatan.appendChild(centang);
     subKegiatan.appendChild(edit);
+    subKegiatan.className = "subKegiatan";
     daftarKegiatan.appendChild(subKegiatan);
 
     // mengosongkan kolom input
@@ -65,4 +68,20 @@ tambahKegiatan.addEventListener("click", () => {
       kegiatan.innerHTML = kolomEdit;
     });
   }
+});
+
+tombolPencarian.addEventListener("click", () => {
+  event.preventDefault();
+
+  let nilaiYangDicari = kolomPencarian.value.toLowerCase();
+  let kegiatanYangDicari = document.querySelectorAll(
+    ".subKegiatan .listKegiatan"
+  );
+
+  kegiatanYangDicari.forEach((element) => {
+    if (element.innerText.toLowerCase() === nilaiYangDicari) {
+      element.style.backgroundColor = "#ffffff";
+      element.style.color = "#000000";
+    }
+  });
 });

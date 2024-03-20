@@ -39,6 +39,43 @@ form {
   gap: 20px;
 }
 
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  align-items: center;
+}
+
+.search {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  font-weight: 400;
+  justify-content: space-between;
+  width: 500px;
+  height: 30px;
+  border: 2.5px solid #dde6ed;
+  border-radius: 20px;
+}
+
+.search-button {
+  background-color: #9db2bf;
+  width: 80px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.search-button:hover {
+  background-color: #2d2d2d;
+  color: #efefef;
+  box-shadow: rgba(255, 255, 255, 0.85) 0px 5px 15px;
+  transform: translateY(2px) translateX(0.5px);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
 button {
   width: 80px;
   height: 25px;
